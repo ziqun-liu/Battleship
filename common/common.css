@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(205, 226, 228);
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+}
+
+/* Navbar section */
+
+#navbar {
+    background: #4b6062;
+    color: lightcyan;
+    position: fixed;
+    display: flex;
+    padding: 20px;
+    top: 0;
+    align-items: center; /* 上下居中 */
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+}
+
+#navbar h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+#navbar ul {
+    display: flex;
+    font-size: 20px;
+    text-decoration: none;
+    padding-right: 50px;
+}
+
+#navbar ul li {
+    display: flex;
+    margin: 0 15px;
+}
+
+#navbar ul li a {
+    color: lightcyan;
+    text-decoration: none;
+}
+
+#navbar ul li a.selected {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#navbar ul li a:hover {
+    text-decoration: underline;
+    color: rgb(66, 170, 234);
+}
+
+/* Home page text section */
+
+h2 {
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.paragraph {
+    font-size: 40px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    background-color: whitesmoke;
+    color: white;
+    padding: 15px 30px;
+    font-size: 36px;
+    border: navy;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.1s ease-in-out;
+}
+
+button:hover {
+    background-color: #4b6062;
+}
+
+button:active {
+    background-color: navy;
+    transform: scale(0.98);
+}
