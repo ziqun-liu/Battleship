@@ -1,14 +1,92 @@
 
-/* Game board */
 .board {
-    display: grid;
-    width: 400px;
-    height: 400px;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    gap: 5px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .board-cell {
+    display: flex;
+    width: 50px;    
+    height: 50px;
+    border-radius: 5px;
+    background-color: lightblue;
+    border: 3px solid gray;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
 
+.board-cell:hover {
+    background-color: #BFD7EA;
+    cursor: pointer;
+}
+
+@media(max-width:600px) {
+
+    .board {
+        display: flex;
+        transform: scale(0.85);
+        transform-origin: top center;
+        justify-content: center;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .column {
+        flex: 1;
+        gap: 1px;
+    }
+
+    .board-cell {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+}
+
+.check {
+    background-image: url("./check.png");
+    background-size: contain;
+}
+
+.cross {
+    background-image: url("./cross.png");
+    background-size: contain;
+}
+
+.miss { 
+    background-color: rgb(228, 170, 170); 
+}
+
+.hit {
+    background-color: rgb(181, 219, 181); 
+}
+
+.ship-cell {
+    background-image: url("./record-button.png");
+    background-size: contain;
+}
+
+.timer {
+    margin: auto;
+    width: fit-content;
+    padding: 10px;
+    border: 2px solid #4B6062;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: black;
+    background-color: #A3E4D7;
 }

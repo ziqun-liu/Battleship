@@ -6,21 +6,252 @@
         <title>Battleship Game</title>
         <link rel="stylesheet" href="../common/common.css">
         <link rel="stylesheet" href="./game.css">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
         <!-- How to avoid duplicate code -->
         <nav id="navbar">
             <h1>Battleship</h1>
             <ul>
-                <li><a href="../">Home</a></li>
-                <li><a href="./" class="selected">Game</a></li>
-                <li><a href="../rules/">Rules</a></li>
-                <li><a href="../scores/">Scores</a></li>
+                <li><a href="../"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="./" class="selected"><i class="fas fa-gamepad"></i>Game</a></li>
+                <li><a href="../rules/"><i class="fas fa-book"></i>Rules</a></li>
+                <li><a href="../scores/"><i class="fas fa-trophy"></i>Scores</a></li>
             </ul>
         </nav> 
 
-        <p class="board">BATTLESHIP <br /> WAR</p>
+        <div class="paragraph">Sample Enemy Board</div>
+        <div class="board">
+            <div class="column">
+                <div class="board-cell hit check"></div>
+                <div class="board-cell miss cross"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+        
+            <div class="column">
+                <div class="board-cell hit check"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+        
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell hit check"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+        
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+            
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell miss cross"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell miss cross"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell hit check"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell miss cross"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+        </div>
+        
+        <p class="paragraph"> 
+            <button>
+                <a href="./">RESTART</a> 
+            </button>
+        </p>
+
+        <div class="timer">
+            Time Elapsed: <span class="mock-timestamp">00:02:48</span>
+        </div>        
+
+        <div class="paragraph">Sample Player Board</div>
+
+        <div class="board">
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell ship-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+        
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell ship-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+        
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+        
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell ship-cell"></div>
+                <div class="board-cell ship-cell"></div>
+                <div class="board-cell ship-cell"></div>
+            </div>
+            
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell hit check"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell ship-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell ship-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell miss cross"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell ship-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+
+            <div class="column">
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell ship-cell"></div>
+                <div class="board-cell ship-cell"></div>
+                <div class="board-cell ship-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+            </div>
+        </div>
         
 
     </body>
